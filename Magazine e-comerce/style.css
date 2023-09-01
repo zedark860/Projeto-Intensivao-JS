@@ -3,3 +3,24 @@
 @tailwind components;
 @tailwind utilities;
 
+  /* Estilizando a barra de rolagem vertical */
+  #produtos-carrinho::-webkit-scrollbar {
+    width: 10px; /* Largura da barra de rolagem */
+  }
+
+  #produtos-carrinho::-webkit-scrollbar-track {
+    background: #686868; /* Cor de fundo da faixa da barra de rolagem */
+  }
+
+  #produtos-carrinho::-webkit-scrollbar-thumb {
+    background: #9c9c9c;
+    border-radius: 10px; /* Cor da alça da barra de rolagem */
+  }
+
+  body::-webkit-scrollbar-track{
+    background: #686868;
+  }
+  body::-webkit-scrollbar-thumb{
+    background: #888;
+    border-radius: 10px;
+  }
