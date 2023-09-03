@@ -5,27 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <title>Document</title>
+  <title>Magazine E-comerce</title>
 </head>
 <body class="bg-stone-300 flex flex-col">
   <section id="carrinho" class="fixed top-0 right-[-360px] bg-black opacity-90 text-white h-screen w-[360px] z-50 duration-500 border-l-4 p-5 flex flex-col justify-between">
     <div id="cabecalho-carrinho" class="flex justify-between m-4">
-      <p>Meu carrinho</p>
+      <p class="text-xl">Meu carrinho</p>
       <button id="fechar-carrinho"><i class="fa-regular fa-circle-xmark"></i></button>
     </div>
     <section id="produtos-carrinho" class="h-3/5 overflow-y-auto scrollbar-thumb-gray-600 flex flex-col gap-2">
     </section>
-    <p id="tot-preco">$200</p>
-    <button class="bg-white text-black p-1">Finalizar compra</button>
+    <p id="preco-total" class="bg-slate-200 text-green-800 rounded-md pl-5"></p>
+    <button id="finalizar-compra" class="bg-white text-black p-1 hover:bg-slate-900 hover:text-white hover:scale-105 duration-500 rounded-xl">Finalizar compra</button>
   </section>
   <header class="flex text-xl sticky top-0 justify-between bg-black px-8 py-4 shadow-lg shadow-[#000000b4] z-10">
-    <img class="h-16" src="assets/logo/hashtag.svg" alt="logo-do-site">
+    <a href="/"><img class="h-16 hover:scale-105 duration-500" src="assets/logo/hashtag.svg" alt="logo-do-site"></a>
     <div class="flex gap-4 items-end text-white mx-2">
       <button id="abrir-carrinho" class="mx-2 hover:text-slate-700 duration-500"><i class="fa-solid fa-cart-shopping"></i></button>
-      <button class="mr-2 hover:text-slate-700 duration-500"><i class="fa-regular fa-user"></i></button>
+      <a href="pedidos.html"><button class="mr-2 hover:text-slate-700 duration-500"><i class="fa-regular fa-user"></i></button></a>
     </div>
   </header>
-  <main class="">
+  <main class="flex flex-col items-center">
+    <section id="filtros" class="p-10 flex">
+      <div class="px-2">
+        <input type="radio" name="filtro" id="exibir-todos" class="peer hidden" checked>
+        <label for="exibir-todos" class="peer-checked:bg-slate-950 peer-checked:text-slate-200 peer-checked:font-bold p-2 rounded-xl select-none cursor-pointer shadow shadow-black duration-500">Todos</label>
+      </div>
+      <div class="px-2">
+        <input type="radio" name="filtro" id="exibir-masculinos" class="peer hidden">
+        <label for="exibir-masculinos" class="peer-checked:bg-slate-950 peer-checked:text-slate-200 peer-checked:font-bold p-2 rounded-xl select-none cursor-pointer shadow shadow-black duration-500">Masculinos</label>
+      </div>
+      <div class="px-2">
+        <input type="radio" name="filtro" id="exibir-femininos" class="peer hidden">
+        <label for="exibir-femininos" class="peer-checked:bg-slate-950 peer-checked:text-slate-200 peer-checked:font-bold p-2 rounded-xl select-none cursor-pointer shadow shadow-black duration-500">Femininos</label>
+      </div>
+    </section>
     <section id="container-produto" class="flex flex-wrap p-10 justify-center gap-10"></section>
   </main>
   <script type="module" src="main.js"></script>
